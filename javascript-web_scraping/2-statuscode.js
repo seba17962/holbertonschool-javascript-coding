@@ -11,5 +11,5 @@ const urlPath = process.argv[2]
 
 axios.get(urlPath)
   .catch(error => {
-    console.log(error.message);
+    console.log(`code: ${error.message}`);
   })
