@@ -1,4 +1,5 @@
 #!/usr/bin/node
+const request = require('request');
 
 if (process.argv.length !== 3) {
     console.log("Usage: node script.js <URL>");
