@@ -8,7 +8,8 @@ if (process.argv.length !== 3) {
 
 const url = process.argv[2];
 
-request.get(url, (error, response) => {
+request
+  .get(url, (error, response) => {
     if (error) {
         console.error("Error:", error.message);
     } else {
