@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const request = require('request');
+const axios = require('axios');
 
 if (process.argv.length !== 3) {
     console.log("Usage: node script.js <URL>");
@@ -8,7 +8,7 @@ if (process.argv.length !== 3) {
 
 const url = process.argv[2];
 
-request
+axios
   .get(url, (error, response) => {
     if (error) {
         console.error("Error:", error.message);
