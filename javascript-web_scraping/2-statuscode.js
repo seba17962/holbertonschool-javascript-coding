@@ -10,6 +10,9 @@ if (process.argv.length !== 3) {
 const urlPath = process.argv[2]
 
 axios.get(urlPath)
-  .catch(error => {
-    console.log(`code: ${error.message}`);
-  })
+.then(response => {
+  console.log('Datos recibidos:', response.data);
+})
+.catch(error => {
+  console.error('Error al realizar la solicitud:', error.message);
+});
