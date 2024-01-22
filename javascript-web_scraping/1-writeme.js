@@ -12,5 +12,7 @@ const fileContent = process.argv[3];
 fs.writeFile(filePath, fileContent, 'utf-8', (error) => {
   if (error) {
     console.error('Error writing to the file:', error)
+  } else {
+    console.log(`${fileContent}`)
   }
 });
