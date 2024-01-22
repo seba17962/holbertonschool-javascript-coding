@@ -1,18 +1,17 @@
 #!/usr/bin/node
-const axios = require('axios');
-const { error } = require('console');
+const request = require('request');
 
 if (process.argv.length !== 3) {
-  console.log('Usage: node script.js URL');
-  process.exit(1);
+    console.log("Usage: node script.js <URL>");
+    process.exit(1);
 }
 
-const urlPath = process.argv[2]
+const url = process.argv[2];
 
-axios.get(urlPath)
-.then(response => {
-  console.log('Datos recibidos:', response.data);
-})
-.catch(error => {
-  console.error('Error al realizar la solicitud:', error.message);
+request.get(url, (error, response) => {
+    if (error) {
+        console.error("Error:", error.message);
+    } else {
+        console.log(`code: ${response.statusCode}`);
+    }
 });
