@@ -13,6 +13,6 @@ request.get(`${apiURL}${movieId}`, (error, response) => {
   if (error) {
     console.log(error);
   } else {
-    console.log(response.data);
+    console.log(response);
   }
 })
