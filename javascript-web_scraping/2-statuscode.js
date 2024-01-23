@@ -8,9 +8,9 @@ if (process.argv.length !== 3) {
 
 const url = process.argv[2];
 
-request(url, (error, response) => {
+request.get(url, (error, response) => {
   if (error) {
-    console.error("Error:", error);
+    console.log(error);
   } else {
     console.log(`code: ${response.statusCode}`);
   }
