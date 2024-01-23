@@ -21,4 +21,4 @@ request.get(apiURL, (error, response, body) => {
 
     console.log(wedgeCount);
   }
-})
+});
